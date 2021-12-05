@@ -12,13 +12,15 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {setUserName,USERNAME} from '../jsutils/Globals';
+import { useHistory } from 'react-router';
 
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        React template app
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -28,15 +30,21 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export default function Login() {
+export default function Login(props) {
+ const history=useHistory();
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+
+    setUserName(data.get('email'));
+console.log(USERNAME);
+history.push({
+pathname:'/About',
+state:{
+response:USERNAME
+}
+});
   };
 
   return (

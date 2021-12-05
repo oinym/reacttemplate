@@ -1,9 +1,12 @@
 import React from 'react';
+import {USERNAME} from '../jsutils/Globals';
 
 export default function About(){
+alert(USERNAME);
+
 return(
 <div>
-<p>This is an Aboout page</p>
+<h1>This is an Aboout page {USERNAME}</h1>
 </div>
 )
 }
