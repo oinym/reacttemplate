@@ -50,13 +50,13 @@ function Navbar() {
         ) : (
           <div className={classes.navlinks}>
             <Link to="/" className={classes.link}>
-              Sign In
-            </Link>
-            <Link to="/about" className={classes.link}>
               About
             </Link>
             <Link to="/contact" className={classes.link}>
               Contact
+            </Link>
+            <Link to="/faq" className={classes.link}>
+              FAQ
             </Link>
           </div>
         )}

@@ -32,9 +32,9 @@ const classes = useStyles();
       >
         <List>
          <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link to="/">Home</Link>
-            </ListItemText>
+            {/*<ListItemText>*/}
+            {/*  <Link to="/">About</Link>*/}
+            {/*</ListItemText>*/}
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
@@ -48,7 +48,7 @@ const classes = useStyles();
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link to="/about">Faq</Link>
+              <Link to="/faq">Faq</Link>
             </ListItemText>
           </ListItem>
         </List>
